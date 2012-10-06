@@ -15,7 +15,7 @@
         </ControlTemplate>
         <!-- Designer Item Template-->
         <ControlTemplate x:Key="DesignerItemTemplate" TargetType="ContentControl">
-            <Grid DataContext="{Binding RelativeSource={RelativeSource TemplatedParent}}">
+            <Grid DataContext="{Binding RelativeSource={RelativeSource TemplatedParent}}" Name="Grid">
                 <s:MoveThumb Template="{StaticResource MoveThumbTemplate}" Cursor="SizeAll"/>
                 <ContentPresenter Content="{TemplateBinding ContentControl.Content}"/>
             </Grid>
@@ -23,27 +23,12 @@
 
     </Control.Resources>
 
-    <Canvas>
-        <ContentControl Width="130"
-                    MinWidth="50"
-                    Height="130"
-                    MinHeight="50"
+    <Canvas Name="Canvas">
+        <ContentControl 
                     Canvas.Top="150"
                     Canvas.Left="470"
                     Template="{StaticResource DesignerItemTemplate}">
-            <c:Switch />
-        </ContentControl>
-        <ContentControl Width="130"
-                    MinWidth="50"
-                    Height="130"
-                    MinHeight="50"
-                    Canvas.Top="150"
-                    Canvas.Left="150"
-                    Template="{StaticResource DesignerItemTemplate}">
-            <Path Fill="Blue"
-            Data="M 0,5 5,0 10,5 5,10 Z"
-            Stretch="Fill"
-            IsHitTestVisible="False"/>
+            <c:Switch/>
         </ContentControl>
     </Canvas>
 </UserControl>
