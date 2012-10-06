@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:s="clr-namespace:RelaySim"
+             xmlns:c="clr-namespace:RelaySim.Components"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Control.Resources>
@@ -30,8 +31,7 @@
                     Canvas.Top="150"
                     Canvas.Left="470"
                     Template="{StaticResource DesignerItemTemplate}">
-            <Ellipse Fill="Red"
-               IsHitTestVisible="False"/>
+            <c:Switch />
         </ContentControl>
         <ContentControl Width="130"
                     MinWidth="50"

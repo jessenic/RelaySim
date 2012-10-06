@@ -50,6 +50,15 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\L.xaml.cs">
+      <DependentUpon>L.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Components\N.xaml.cs">
+      <DependentUpon>N.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Switch.xaml.cs">
+      <DependentUpon>Switch.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DesignControl.xaml.cs">
       <DependentUpon>DesignControl.xaml</DependentUpon>
     </Compile>
@@ -88,6 +97,18 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Components\L.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Components\N.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Components\Switch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DesignControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
