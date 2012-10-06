@@ -10,19 +10,19 @@
     X1="50" Y1="5"
     X2="50" Y2="50"
     Stroke="Black"
-    StrokeThickness="4" />
+    StrokeThickness="4" IsHitTestVisible="False"/>
 
         <Line Name="SwitchLine"
     X1="50" Y1="50"
     X2="50" Y2="100"
     Stroke="Red"
-    StrokeThickness="4" MouseDown="SwitchLine_MouseDown" Cursor="Hand"/>
+    StrokeThickness="4" MouseDown="SwitchLine_MouseDown" Cursor="Hand" IsHitTestVisible="True"/>
 
         <Line
     X1="50" Y1="100"
     X2="50" Y2="150"
     Stroke="Black"
-    StrokeThickness="4" />
+    StrokeThickness="4" IsHitTestVisible="False"/>
     </Grid>
 
 </UserControl>
