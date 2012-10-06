@@ -16,7 +16,7 @@
     X1="50" Y1="50"
     X2="50" Y2="100"
     Stroke="Red"
-    StrokeThickness="4" MouseDown="SwitchLine_MouseDown"/>
+    StrokeThickness="4" MouseDown="SwitchLine_MouseDown" Cursor="Hand"/>
 
         <Line
     X1="50" Y1="100"

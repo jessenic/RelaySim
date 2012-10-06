@@ -16,7 +16,7 @@
         <!-- Designer Item Template-->
         <ControlTemplate x:Key="DesignerItemTemplate" TargetType="ContentControl">
             <Grid DataContext="{Binding RelativeSource={RelativeSource TemplatedParent}}" Name="Grid">
-                <s:MoveThumb Template="{StaticResource MoveThumbTemplate}" Cursor="SizeAll"/>
+                <s:MoveThumb Template="{StaticResource MoveThumbTemplate}" Cursor="SizeAll" BorderBrush="Aqua" BorderThickness="1"/>
                 <ContentPresenter Content="{TemplateBinding ContentControl.Content}"/>
             </Grid>
         </ControlTemplate>
