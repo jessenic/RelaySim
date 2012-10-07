@@ -17,7 +17,7 @@ namespace RelaySim.Components
     /// <summary>
     /// Interaction logic for Lamp.xaml
     /// </summary>
-    public partial class Lamp : UserControl
+    public partial class Lamp : ElectricComponent
     {
         public Lamp()
         {

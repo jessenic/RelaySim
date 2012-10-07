@@ -18,7 +18,7 @@ namespace RelaySim.Components
     /// <summary>
     /// Interaction logic for N.xaml
     /// </summary>
-    public partial class N : UserControl
+    public partial class N : ElectricComponent
     {
         public N()
         {

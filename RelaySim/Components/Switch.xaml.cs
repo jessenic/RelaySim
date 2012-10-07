@@ -18,7 +18,7 @@ namespace RelaySim.Components
     /// <summary>
     /// Interaction logic for Switch.xaml
     /// </summary>
-    public partial class Switch : UserControl
+    public partial class Switch : ElectricComponent
     {
         public Switch()
         {
