@@ -20,6 +20,7 @@ namespace RelaySim
             listBox1.Items.Add(new ComponentListItem(typeof(Switch), "Switch"));
             listBox1.Items.Add(new ComponentListItem(typeof(N), "N"));
             listBox1.Items.Add(new ComponentListItem(typeof(L), "L"));
+            listBox1.Items.Add(new ComponentListItem(typeof(Lamp), "Lamp"));
         }
 
         private void listBox1_DoubleClick(object sender, EventArgs e)

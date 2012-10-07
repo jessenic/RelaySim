@@ -27,7 +27,7 @@
     <ProductName>RelaySim</ProductName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.html</WebPage>
-    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationRevision>6</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -89,6 +89,9 @@
     <Compile Include="Components\L.xaml.cs">
       <DependentUpon>L.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Components\Lamp.xaml.cs">
+      <DependentUpon>Lamp.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Components\N.xaml.cs">
       <DependentUpon>N.xaml</DependentUpon>
     </Compile>
@@ -136,6 +139,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="Components\L.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Components\Lamp.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
