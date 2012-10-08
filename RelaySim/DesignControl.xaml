@@ -6,7 +6,7 @@
              xmlns:s="clr-namespace:RelaySim"
              xmlns:c="clr-namespace:RelaySim.Components"
              mc:Ignorable="d" 
-             d:DesignHeight="400" d:DesignWidth="800">
+             d:DesignHeight="400" d:DesignWidth="800" AllowDrop="True">
     <Control.Resources>
 
         <!-- MoveThumb Template -->
@@ -23,7 +23,7 @@
 
     </Control.Resources>
 
-    <Canvas Name="Canvas">
+    <Canvas Name="Canvas" AllowDrop="True">
         <ContentControl 
                     Canvas.Top="150"
                     Canvas.Left="470"

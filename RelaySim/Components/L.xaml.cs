@@ -23,6 +23,9 @@ namespace RelaySim.Components
         public L()
         {
             InitializeComponent();
+            this.Ports = new List<Connection>();
+            ((Connection)Con1.Content).Component = this;
+            this.Ports.Add((Connection)Con1.Content);
         }
     }
 }

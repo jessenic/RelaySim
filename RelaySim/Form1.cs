@@ -21,6 +21,7 @@ namespace RelaySim
             listBox1.Items.Add(new ComponentListItem(typeof(N), "N"));
             listBox1.Items.Add(new ComponentListItem(typeof(L), "L"));
             listBox1.Items.Add(new ComponentListItem(typeof(Lamp), "Lamp"));
+            listBox1.Items.Add(new ComponentListItem(typeof(Wire), "Wire"));
         }
 
         private void listBox1_DoubleClick(object sender, EventArgs e)
@@ -32,6 +33,38 @@ namespace RelaySim
             Canvas.SetTop(cc, 10);
             Canvas.SetLeft(cc, 50);
             dc.Canvas.Children.Add(cc);
+        }
+
+        private void listBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            //this.listBox1.DoDragDrop(this.listBox1.SelectedItem, DragDropEffects.Copy); 
+        }
+
+        private void listBox1_DragOver(object sender, DragEventArgs e)
+        {
+            e.Effect = DragDropEffects.Copy;
+        }
+
+        private void startSimulationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DesignControl dc = ((DesignControl)elementHost1.Child);
+            foreach (System.Windows.UIElement uie in dc.Canvas.Children)
+            {
+                if (uie.GetType() == typeof(ContentControl))
+                {
+                    ContentControl cc = uie as ContentControl;
+                    if (cc.Content.GetType() == typeof(L))
+                    {
+                        L l = cc.Content as L;
+                        foreach(Connection c1 in l.Ports){
+                            foreach (Connection c in c1.ConnectedTo)
+                            {
+                                Console.WriteLine(c.Component);
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
     public class ComponentListItem

@@ -8,5 +8,14 @@ namespace RelaySim.Components
 {
     public class ElectricComponent : UserControl
     {
+        public ElectricComponent()
+        {
+            this.Ports = new List<Connection>();
+        }
+        public List<Connection> Ports { get; internal set; }
+        virtual public bool DoesConduct(Connection PortA, Connection PortB)
+        {
+            return false;
+        }
     }
 }

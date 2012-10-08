@@ -5,20 +5,26 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:c="clr-namespace:RelaySim.Components"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300" Width="40" Height="40">
-    <Grid>
+             d:DesignHeight="300" d:DesignWidth="300" Width="30" Height="30">
+    <Canvas>
         <Ellipse Width="30" Height="30" Stroke="Black"
     StrokeThickness="4" IsHitTestVisible="False" />
 
         <Line
-    X1="10" Y1="10"
-    X2="30" Y2="30"
+    X1="5" Y1="5"
+    X2="25" Y2="25"
     Stroke="Black"
     StrokeThickness="4" IsHitTestVisible="False"/>
         <Line
-    X1="30" Y1="10"
-    X2="10" Y2="30"
+    X1="25" Y1="5"
+    X2="5" Y2="25"
     Stroke="Black"
     StrokeThickness="4" IsHitTestVisible="False"/>
-    </Grid>
+        <ContentControl Name="Con1" Canvas.Left="10">
+            <c:Connection IsGround="False" IsSource="False" IsHitTestVisible="True" />
+        </ContentControl>
+        <ContentControl Name="Con2" Canvas.Left="10" Canvas.Bottom="1">
+            <c:Connection IsGround="False" IsSource="False" IsHitTestVisible="True" />
+        </ContentControl>
+    </Canvas>
 </c:ElectricComponent>

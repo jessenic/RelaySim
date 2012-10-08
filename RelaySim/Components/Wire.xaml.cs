@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -16,16 +15,18 @@ using System.Windows.Shapes;
 namespace RelaySim.Components
 {
     /// <summary>
-    /// Interaction logic for N.xaml
+    /// Interaction logic for Wire.xaml
     /// </summary>
-    public partial class N : ElectricComponent
-    {
-        public N()
+    public partial class Wire : ElectricComponent {
+        public Wire()
         {
             InitializeComponent();
             this.Ports = new List<Connection>();
-            ((Connection)Con1.Content).Component = this;
-            this.Ports.Add((Connection)Con1.Content);
+        }
+        public override bool DoesConduct(Connection A, Connection B)
+        {
+            //Wire conducts always
+            return true;
         }
     }
 }
